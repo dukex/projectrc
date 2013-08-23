@@ -1,0 +1,22 @@
+function activate() {
+  PROJECT_DIR=`pwd`
+  PROJECT_RC=$PROJECT_DIR/.projectrc
+  if [[ -a $PROJECT_RC ]]; then
+    source $PROJECT_RC
+  fi
+  unset PROJECT_RC
+  unset PROJECT_DIR
+}
+
+
+function create_projectrc() {
+  PROJECT_DIR=`pwd`
+  PROJECT_RC=$PROJECT_DIR/.projectrc
+  touch $PROJECT_RC
+  echo "# define yours alias, env var, here" >> $PROJECT_RC
+  unset PROJECT_RC
+  unset PROJECT_DIR
+}
+
+
+
