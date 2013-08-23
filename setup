@@ -18,5 +18,9 @@ function create_projectrc() {
   unset PROJECT_DIR
 }
 
-
+function cd
+{
+    builtin cd "$1"
+    activate
+}
 
